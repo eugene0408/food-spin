@@ -1,0 +1,298 @@
+@import config
+
+.header
+    height: 100vh
+    width: 100%
+.topline
+    margin-top: 50px
+    display: block
+    position: relative
+    z-index: 2
+
+    .logo
+        width: 105px
+    .menu
+        display: inline-block
+        margin-left: 20%
+        position: relative
+        @media screen and ( max-width: 768px )
+            display: none
+            
+
+        ul 
+            width: 100%
+            li 
+                display: inline
+                font-size: 14px
+                margin-left: 60px
+                color: #000000
+                position: relative
+                padding-bottom: .5em
+                &::after
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    height: 2px
+                    background: $orange
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s
+                    width: 0
+                &:hover::after
+                    width: 100%
+                    left: 0
+
+    .cart 
+        width: 18px
+        display: inline-block
+        float: right
+        transition: .3s ease-in-out
+        &:hover
+            transform: scale(1.2)
+
+
+
+.dish
+    margin-top: 20%
+    @media screen and ( max-width:  992px)
+        margin-top: 10%
+    @media screen and ( max-width: 768px )
+        margin-top: 500px
+    @media screen and ( max-width: 576px )
+        margin-top: 425px
+        
+    &-descript
+        margin-top: 1em
+        text-transform: capitalize
+    &-button
+        display: inline-block
+        color: #ffffff
+        font-weight: 700
+        font-size: 13px
+        border: none
+        border-radius: 69px
+        padding: 14px 35px
+        margin-top: 2em
+        transition: .3s ease
+        width: 180px
+        vertical-align: center
+        span
+            transition: .5s ease
+            position: relative
+            display: inline-block
+            &::after
+                content: '\00bb'
+                font-size: 25px
+                position: absolute
+                opacity: 0
+                top: -50%
+                right: -20px
+                transition: 0.3s ease
+        &:hover
+            span
+                padding-right: 25px
+                &::after
+                    opacity: 1
+                    right: 0
+
+
+
+.circle
+    &-bg
+        $bg-rad: 1500px
+        position: absolute
+        top: -1000px
+        left: -150px
+        display: flex
+        justify-content: center
+        border-radius: 100%
+        width: $bg-rad
+        height: $bg-rad
+        overflow: hidden
+        z-index: 1
+        transition: background .3s ease-in-out 
+        @media screen and ( max-width:  1600px)
+            top: -700px
+            left: -120px
+            $bg-rad: 1200px
+            height: $bg-rad
+            width: $bg-rad
+        @media screen and ( max-width:  1250px)
+            top: -450px
+            left: -90px
+            $bg-rad: 950px
+            height: $bg-rad
+            width: $bg-rad
+        @media screen and ( max-width:  992px)
+            $bg-rad: 800px
+            height: $bg-rad
+            width: $bg-rad
+            top: -450px
+            left: -90px
+        @media screen and ( max-width:  768px )
+            $bg-rad: 750px
+            height: $bg-rad
+            width: $bg-rad
+            top: -450px
+            left: -90px
+        @media screen and ( max-width:  576px ) 
+            $bg-rad: 600px
+            height: $bg-rad
+            width: $bg-rad
+            top: -270px
+            left: -50px
+           
+            
+    &-dashed
+        $dash-rad: 700px
+        position: absolute
+        bottom: -25%
+        border: 2px dashed #E87F1E
+        border-radius: 100%
+        height: $dash-rad
+        width: $dash-rad
+        transition: all .3s ease
+        @media screen and ( max-width:  1600px)
+            $dash-rad: 600px
+            height: $dash-rad
+            width: $dash-rad
+        @media screen and ( max-width:  1250px)
+            bottom: -30%
+            $dash-rad: 550px
+            height: $dash-rad
+            width: $dash-rad
+        @media screen and ( max-width:  992px)
+            bottom: -30%
+            $dash-rad: 450px
+            height: $dash-rad
+            width: $dash-rad
+        @media screen and ( max-width:  768px)
+            bottom: -35%
+            $dash-rad: 500px
+            height: $dash-rad
+            width: $dash-rad
+        @media screen and ( max-width:  567px)
+            bottom: -35%
+            $dash-rad: 470px
+            height: $dash-rad
+            width: $dash-rad
+        .dish-center
+            $center-rad: 300px
+            border-radius: 100%
+            height: $center-rad
+            width: $center-rad
+            background-position: center 
+            background-size: contain
+            @media screen and ( max-width: 1250px )
+                $center-rad: 250px
+                height: $center-rad
+                width: $center-rad
+            @media screen and ( max-width: 992px )
+                $center-rad: 200px
+                height: $center-rad
+                width: $center-rad
+        .dish-item 
+            position: absolute
+            $item-rad: 100px 
+            height: $item-rad
+            width: $item-rad
+            background: gray
+            border-radius: 100%
+            background-position: center 
+            background-size: contain
+            @media screen and ( max-width: 992px )
+                $item-rad: 80px 
+                height: $item-rad
+                width: $item-rad
+        .nav-btn
+            position: absolute
+            top: 65%
+            border-radius: 100%
+            padding: 14px  
+            img 
+                width: 15px
+            &:nth-of-type(1)
+                left: 0
+            &:nth-of-type(2)
+                right: 0
+            @media screen and (min-width: 768px) and ( max-width: 992px )
+                top: 75%
+                &:nth-of-type(1)
+                    left: 50px
+                &:nth-of-type(2)
+                    right: 50px
+            @media screen and ( max-width: 576px )
+                top: 75%
+                &:nth-of-type(1)
+                    left: 150px
+                &:nth-of-type(2)
+                    right: 150px
+                
+                
+
+                
+.overflow-v
+    overflow: visible
+    border: none
+    background: transparent
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+
+    //  *  Variable Classes
+
+.orange
+    color: $orange
+.green 
+    color: $green
+
+.btn-orange
+    background: $orange
+    box-shadow: 0px 20px 40px #F4E2D1  
+
+
+.btn-green
+    background: $green   
+    box-shadow: 0px 20px 40px #DBF4D1 
+
+ 
+
+.bg-orange
+    background: $bgorange
+.bg-green
+    background: $bggreen
+
+.nav-orange
+    background: $orange
+    box-shadow: 0px 10px 20px #F5ECE3    
+.nav-green
+    background: $green
+    box-shadow: 0px 10px 20px #F5ECE3      
+      
+    // * animations 
+
+.animate-plate
+    animation: plate-spin .5s
+
+
+@keyframes plate-spin
+    0%
+        transform: scale(0.8) rotate(-30deg)
+    100%
+        transform: scale(1) rotate(0)
+
+
+
+
+
+
+
+
+
+
+
+
+@media ( max-width: 1400px )
+    .topline
+        margin-top: 20px
