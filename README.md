@@ -1,5 +1,5 @@
 # food-spin
-Landing page with spiner carousel
+Responsive spiner carousel menu
 
 Live: https://foodspin.ml/
 
