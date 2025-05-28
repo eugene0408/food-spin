@@ -1,5 +1,5 @@
 # food-spin
-Responsive spiner carousel menu, layout based on a free template.
+Responsive spinning carousel menu with animated selection.
 
 Built with **html**, **sass** and **JavaScript**
 
